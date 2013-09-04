@@ -21,7 +21,11 @@ setup(
     packages=[
         'blancseo',
         'blancseo.seo',
+        'blancseo.seo.templatetags',
     ],
+    package_data={'blancseo': [
+        'seo/templates/seo/*.html',
+    ]},
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
