@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.contrib.contenttypes.generic import GenericStackedInline
+from django.contrib.contenttypes.admin import GenericStackedInline
 
 from .models import MetaContent, URLMetaContent
 
@@ -9,8 +9,6 @@ class MetaContentInlineAdmin(GenericStackedInline):
     max_num = 1
 
 
+@admin.register(URLMetaContent)
 class URLMetaContentAdmin(admin.ModelAdmin):
     search_fields = ('url',)
-
-
-admin.site.register(URLMetaContent, URLMetaContentAdmin)
