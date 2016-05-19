@@ -5,13 +5,9 @@ except ImportError:
     from distutils.core import setup
 
 
-# Use blanc_pages.VERSION for version numbers
-version_tuple = __import__('blancseo').VERSION
-version = '.'.join([str(v) for v in version_tuple])
-
 setup(
     name='blanc-seo',
-    version=version,
+    version='0.1',
     description='Blanc SEO for Django',
     long_description=open('README.rst').read(),
     url='http://www.blanctools.com/',
