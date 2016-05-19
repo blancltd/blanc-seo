@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.contenttypes.generic import GenericStackedInline
-from models import MetaContent, URLMetaContent
+
+from .models import MetaContent, URLMetaContent
 
 
 class MetaContentInlineAdmin(GenericStackedInline):

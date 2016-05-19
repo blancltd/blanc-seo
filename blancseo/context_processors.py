@@ -1,6 +1,7 @@
 from django.utils.functional import SimpleLazyObject
 from django.conf import settings
-from blancseo.seo.models import URLMetaContent
+
+from .models import URLMetaContent
 
 
 def url_metacontent(request):

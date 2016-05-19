@@ -1,6 +1,7 @@
 from django import template
 from django.contrib.contenttypes.models import ContentType
-from blancseo.seo.models import MetaContent
+
+from ..models import MetaContent
 
 register = template.Library()
 

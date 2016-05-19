@@ -20,8 +20,8 @@ setup(
     platforms=['any'],
     packages=[
         'blancseo',
-        'blancseo.seo',
-        'blancseo.seo.templatetags',
+        'blancseo',
+        'blancseo.templatetags',
     ],
     package_data={'blancseo': [
         'seo/templates/seo/*.html',
