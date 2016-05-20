@@ -1,5 +1,5 @@
-from django.utils.functional import SimpleLazyObject
 from django.conf import settings
+from django.utils.functional import SimpleLazyObject
 
 from .models import URLMetaContent
 
@@ -18,7 +18,7 @@ def url_metacontent(request):
         try:
             return URLMetaContent.objects.get(url=url)
         except URLMetaContent.DoesNotExist:
-            return ''
+            return None
 
     return {
         'url_metacontent': SimpleLazyObject(get_metacontent),
