@@ -10,7 +10,7 @@ with open('README.rst', 'r', 'utf-8') as f:
 
 setup(
     name='blanc-seo',
-    version='0.1',
+    version='0.2',
     description='Blanc SEO for Django',
     long_description=readme,
     url='https://github.com/blancltd/blancseo',
