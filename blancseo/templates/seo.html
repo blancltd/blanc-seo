@@ -4,12 +4,18 @@
         {{ meta.title }}
     {% else %}
         {% if title %}
-            {{ title }} -
+            {{ title }}
         {% elif object %}
-            {{ object }} -
+            {{ object }}
         {% endif %}
 
-        Website
+        {% if site %}
+            {% if title or object %}
+                -
+            {% endif %}
+
+            {{ site.name }}
+        {% endif %}
     {% endif %}
 </title>
 

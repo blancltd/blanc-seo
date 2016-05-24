@@ -1,4 +1,5 @@
 from django import template
+from django.apps import apps
 from django.contrib.contenttypes.models import ContentType
 
 from ..models import MetaContent
@@ -27,8 +28,16 @@ def seo(context, obj=None, title=None):
     elif obj is None:
         meta = context.get('url_metacontent')
 
+    # Use sites framework if available to get the default site title
+    if apps.is_installed('django.contrib.sites'):
+        from django.contrib.sites.models import Site
+        site = Site.objects.get_current()
+    else:
+        site = None
+
     return {
         'object': obj,
         'title': title,
         'meta': meta,
+        'site': site,
     }
