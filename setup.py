@@ -13,7 +13,7 @@ setup(
     version='0.2',
     description='Blanc SEO for Django',
     long_description=readme,
-    url='https://github.com/blancltd/blancseo',
+    url='https://github.com/developersociety/blancseo',
     maintainer='Blanc Ltd',
     maintainer_email='studio@blanc.ltd.uk',
     platforms=['any'],
